@@ -1,0 +1,36 @@
+name: Feature request
+description: Suggest an improvement, workflow refinement, or new capability.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Editor / Live Preview / Vim
+        - Reading view / Math / Mermaid diagrams
+        - Files / Vault / Cloud sync
+        - Search / Links / Graph
+        - Canvas / Bases
+        - Flashcards / History / Tasks / Focus
+        - MCP server (AI agents)
+        - Runbooks / Docs-as-code / CI checks
+        - Mobile (iPhone & iPad)
+        - Themes / Accessibility / Shortcuts
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What workflow or problem would this solve?
+      placeholder: "When I am working on ..., I want to ..."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: How should it work?
+      description: Describe how you imagine it feeling in Rhyolite (commands, Markdown syntax, settings, or Obsidian compatibility).
+    validations:
+      required: true

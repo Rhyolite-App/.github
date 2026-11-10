@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security Vulnerability Report
+    url: mailto:support@rhyolite.app?subject=SECURITY%3A%20Rhyolite%20Vulnerability%20Report
+    about: Report a security issue privately (please do not file public issues for security bugs).
+  - name: Rhyolite Support & FAQ
+    url: https://rhyolite.app/support
+    about: Read answers to common setup, vault storage, and sync questions or contact support@rhyolite.app.

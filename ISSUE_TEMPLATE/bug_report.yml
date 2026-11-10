@@ -1,0 +1,75 @@
+name: Bug report
+description: Report something in Rhyolite that isn't working as expected.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please never paste real API keys, passwords, or private notes into public issues.
+  - type: input
+    id: version
+    attributes:
+      label: Rhyolite version
+      description: Shown in Help → About Rhyolite (or `Rhyolite --version`).
+      placeholder: "0.3.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS (Apple silicon)
+        - Windows (x64)
+        - Linux (x64)
+        - iPhone / iPad (TestFlight)
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: OS version
+      placeholder: "macOS 15.4 / Windows 11 24H2 / Ubuntu 24.04 / iOS 18.4"
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Editor / Live Preview / Vim
+        - Reading view / Math / Mermaid diagrams
+        - Files / Vault / Cloud sync (iCloud, OneDrive, Google Drive)
+        - Search / Links / Graph
+        - Canvas / Bases
+        - Flashcards / History / Tasks / Focus
+        - MCP server (AI agents)
+        - Runbooks / Docs-as-code / Rhyolite check
+        - Installer / Startup / Performance
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, step by step? If a short Markdown snippet triggers it, paste a minimal example.
+      placeholder: |
+        1. Open Rhyolite Sandbox
+        2. Create a note containing ...
+        3. Press ...
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+      description: Describe what actually occurred (and attach a screenshot if helpful).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
